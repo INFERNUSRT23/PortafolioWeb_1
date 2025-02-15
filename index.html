@@ -3,35 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina 1</title>
+    <title>Practica 2 Web</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        th {
+            border: 1px solid blue;
+            border-spacing: 5px; /* Espaciado entre los bordes */
+            padding: 5px;/* Espacio interno de 5 píxeles */
+        }
+
+        td {
+            border: 1px solid blue;
+            border-spacing: 5px; /* Espaciado entre los bordes */
+            padding: 5px;/* Espacio interno de 5 píxeles */
+        }
+        tr {
+            border: 1px solid blue;
+            border-spacing: 5px; /* Espaciado entre los bordes */
+            padding: 5px;/* Espacio interno de 5 píxeles */
+        }
+        p {
+            text-align: justify;
+        }
+        table {
+            margin: auto; /* Centra la tabla horizontalmente */
+            border-collapse: separate;
+            width: auto;
+            border: 2px solid blue;
+        }
+    </style>
 </head>
 <body>
-    <h1>Introduccion al lenguaje HTML</h1>
-    <nav>
-        <ul type="circle"><!--ul es una lista desordenada-->
-            <li>HTML</li><!--li es cada elemento de la lista-->
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Ejemplos</li>
-        </ul>
-    </nav>
-    <section><!--section es seccion de contenido-->
-        <h2>Tutorial de HTML</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora totam iste tempore, sequi repellendus soluta dolor expedita molestias veniam. Labore mollitia, tempora nemo saepe illo vel consequuntur nam odit atque.</p>
-    </section>
+    <header>
+        <h1 style="text-align: center;">ELECTRONICA</h1>
+        <h2 style="text-align: center;">Lista de Productos</h2>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <th><B>DEPARTAMENTO</B></th>
+                <th><B>CÓDIGO</B></th>
+                <th><B>PRODUCTO</B></th>
+                <th><B>MARCA</B></th>
+                <th><B>PRECIO</B></th>
+                <td>OFERTA ESPECIAL</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">ELECTRONICA</td>
+                <TD>129867</TD>
+                <TD>TV 40"</TD>
+                <TD>Samsung</TD>
+                <TD>$5699.00</TD>
+                <TD>12 MSI</TD>
+            </tr>
+            <tr>
+                <TD>129832</TD>
+                <TD>TV 60"</TD>
+                <TD>Samsung</TD>
+                <TD>$14599.00</TD>
+                <TD>12 MSI</TD>
+            </tr>
+            <tr>
+                <td rowspan="3">TELEFONIA</td>
+                <TD>129358</TD>
+                <TD>Smartphone</TD>
+                <TD>Motorola</TD>
+                <TD>$3697.00</TD>
+                <TD>13 MSI</TD>
+            </tr>
+            <tr>
+                <TD>129321</TD>
+                <TD>Smartphone</TD>
+                <TD>Samsung Galaxy</TD>
+                <TD>$6997.00</TD>
+                <TD>6 MSI</TD>
+            </tr>
+            <tr>
+                <TD>138756</TD>
+                <TD>Telefono inalambrico</TD>
+                <TD>Motorola</TD>
+                <TD>$578.00</TD>
+                <TD>5% pago en efectivo</TD>
+            </tr>
+            <tr>
+                <td rowspan="2">COMPUTACION</td>
+                <TD>129329</TD>
+                <TD>Impresora</TD>
+                <TD>HP Ink Tank 115</TD>
+                <TD>$3176.00</TD>
+                <TD>12 MSI</TD>
+            </tr>
+            <tr>
+                <TD>127231</TD>
+                <TD>Mesa para laptop</TD>
+                <TD>Mainstays</TD>
+                <TD>$999.00</TD>
+                <TD>6 MSI</TD>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>SÓLO LOS MEJORES PRODUCTOS</h2>
     <section>
-        <h2>Tutorial de CSS</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, eaque assumenda magni eius culpa ab alias nam corporis possimus accusamus, pariatur doloremque eveniet reiciendis. Beatae voluptates ea nemo asperiores ullam.</p>
+        <p>Encuentra audífonos, celulares, cámaras, accesorios para celulares, computadoras, tabletas, 
+            artículos de oficina, electrónicos de oficina, instrumentos musicales, drones, cámaras de 
+            seguridad, televisiones y mucho más.
+        </p>
+        <p>
+            Te ofrecemos solo productos de calidad, las mejores marcas, el mejor servicio, la app más 
+confiable y todas las formas de pago, nuestro objetivo facilitar tu vida con la mejor calidad.
+        </p>
+        <p>
+            Encuentra todo lo que necesita en el mejor lugar.
+        </p>
     </section>
-    <section>
-        <h2>Tutorial de JavaScript</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt non suscipit, in excepturi repellendus minus laborum quae tempore, velit perferendis iure dolorum neque? Odit obcaecati quod quasi inventore impedit autem?</p>
-        <h3>Temas a estudiar</h3>
-            <ol type="I">
-                <li>Sintaxis</li>
-                <li>Etiquetas basicas</li>
-                <li>Ejemplos</li>
-            </ol>
-    </section>
+
+    <h2>NUESTRAS SUCURSALES</h2>
+    <ul>
+         <li>Centro</li>
+         <li>El Dorado</li>
+         <li>Plaza San Luis</li>
+         <li>Tangamanga</li>
+         <li>Citadella</li>
+         <li>Carranza</li>
+    </ul>
+    <cite><u><a href="https://super.walmart.com.mx/content/electronica/2910049">https://super.walmart.com.mx/electronica/cat2910049</a></u></cite>
 </body>
 </html>
