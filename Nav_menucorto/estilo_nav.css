@@ -1,0 +1,22 @@
+
+
+ul {
+    list-style-type: none;/*Para eliminar viñetas, pero sin perder el formato*/
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: antiquewhite;
+}
+
+li a {
+    background-color: antiquewhite;
+    display: block;/*Trata los elementos en bloque(Como uno solo)*/
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-decoration: none;
+}
+
+li a.activo {
+    background-color: rgb(247, 0, 255);
+    color: aliceblue;
+}
