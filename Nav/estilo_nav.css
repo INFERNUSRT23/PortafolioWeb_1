@@ -1,0 +1,74 @@
+
+ul {
+    list-style-type: none;/*Para eliminar viñetas, pero sin perder el formato*/
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    height: 100%;
+    position: fixed;/*´fixed´ se utiliza para MANTENER el elemento fijo*/
+    background-color: antiquewhite;
+    overflow: auto; /*Sirve para agregar las flechas de desplazamiento dentro del ´ul´*/
+}
+
+li a {
+    background-color: antiquewhite;
+    display: block;/*Trata los elementos en bloque(Como uno solo)*/
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+li a.activo {
+    background-color: rgb(251, 129, 255);
+    color: aliceblue;
+}
+
+li a.activo:hover:not(.activo) { /*Se cambia el diseño a todo A EXCEPCION de la clase ".activo" por eso se utiliza la etiqueta  'not'*/
+    background-color: blueviolet;
+    color: lightblue;
+}
+
+h1 {
+    font-family: "Big Shoulders Inline", sans-serif;
+    font-optical-sizing: auto;
+}
+
+h2 {
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "parrafos";
+    src: url("Nav/IBMPlexMono-Italic.ttf") format(truetype);
+    font-weight: 400;
+}
+
+p {
+    font-family: "parrafos";
+    font-size: 1.2em;
+    font-weight: 400;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
