@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestro Servicios - Farmacias Similares</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: white;
+        color: black;
+        text-align: center;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background: #004aad;
+        color: white;
+      }
+      .search-bar {
+        border: 2px solid #004aad;
+        padding: 10px;
+        border-radius: 25px;
+        width: 300px;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .btn {
+        background: white;
+        border: 2px solid #004aad;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 16px;
+        color: #004aad;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn:hover {
+        background: #004aad;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <input
+        type="text"
+        class="search-bar"
+        placeholder="¿Qué estás buscando?"
+      />
+      <h1>Mi cuenta</h1>
+      <p>$ 0.00</p>
+    </div>
+    <div class="content">
+      <h2>Ahora estamos disponibles 24/7</h2>
+      <img
+        src="/src/sucursal.png"
+        alt="Farmacia 24/7"
+        style="width: 80%; max-width: 600px"
+      />
+      <div class="buttons">
+        <a href="#" class="btn">SUCURSALES</a>
+        <a href="#" class="btn">MEDICAMENTOS</a>
+      </div>
+      <div class="location">
+        <button class="btn">Seleccionar ubicación</button>
+      </div>
+    </div>
+    <a
+      href="index.html"
+      class="btn"
+      style="margin-top: 20px; display: inline-block"
+      >Volver</a
+    >
+  </body>
+</html>
