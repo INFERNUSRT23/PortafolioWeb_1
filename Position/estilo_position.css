@@ -1,0 +1,51 @@
+.contenedor {
+    position: relative; /*Va a ir en relación con el documento (mantiene su formato normal)*/
+    top: 50px;
+    background: gray;
+    height: 150px;
+}
+
+.capa1 {
+    position: relative;
+    height: 50px;
+    top: 25px;
+    left: 25px;
+    background-color: pink;
+}
+
+.capa2 {
+    position: absolute; /*Para colocar encima de otras capas*/
+    background-color: orange;
+    right: 50px;
+    height: 100px;
+    width: 150px;
+    z-index: 1;
+}
+
+.capa3 {
+    position: absolute;
+    background-color: green;
+    width: 150px;
+    height: 150px;
+    z-index: 2;
+}
+
+.capa4 {
+    position: absolute;
+    background-color: blue;
+    width: 150px;
+    height: 200px;
+    top: 120px;
+    left: 50px;
+    z-index: 3;
+}
+
+.capa5 {
+    border: 2px solid purple;
+    width: 200px;
+    height: 50px;
+    position: fixed; /*Para que se quede fija*/
+    bottom: 0px;
+    right: 0px;
+    z-index: 4;
+}
