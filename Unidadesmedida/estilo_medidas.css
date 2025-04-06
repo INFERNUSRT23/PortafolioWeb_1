@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  /* Estilos generales */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  .section {
+    margin-bottom: 30px;
+  }
+
+  .example-box {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    height: 120px;
+  }
+
+  /* Unidades absolutas */
+  .absolute {
+    background-color: #4CAF50;
+  }
+
+  .absolute p {
+    font-size: 16px;
+  }
+
+  /* Unidades relativas */
+  .relative {
+    background-color: #2196F3;
+  }
+
+  .relative-percent {
+    background-color: #FF5722;
+    font-size: 1.2em;
+  }
+  
+  .relative-em {
+    background-color: #673AB7;
+    font-size: 2em;
+  }
+  
+  .relative-rem {
+    background-color: #009688;
+    font-size: 1.5rem;
+  }
+
+  .relative-vw, .relative-vh {
+    background-color: #FFC107;
+    font-size: 3vw;  /* Ajuste para que sea mas manejable */
+  }
+
+  .relative-ch {
+    background-color: #607D8B;
+    font-size: 2ch;  /* Ajuste para evitar que se vea demasiado grande */
+  }
+
+  /* Ajuste para hacer que los ejemplos relativos sean mas manejables */
+  .relative-vw, .relative-vh {
+    font-size: 4vw;
+    height: auto;
+    min-height: 120px;  /* Asegura que no se vea aplastado */
+  }
