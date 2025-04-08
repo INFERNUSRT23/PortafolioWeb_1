@@ -1,0 +1,53 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #afffff;
+    margin: 0;
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 5px solid blue;
+}
+
+button {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: blue;
+    color: wheat;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button:hover {
+    background-color: white;
+    color: blue;
+}
