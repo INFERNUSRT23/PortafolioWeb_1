@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura desde formulario con JavaScript</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/JavaScript" src="leerForm.js">
+       
+    </script>
+</head>
+<body>
+    <div class="titulos">
+    <h1>Registro de usuario</h1>
+    </div>
+    <form name="formulario">
+        <label for="user">Nombre:</label>
+        <input type="text" name="user" id="user"><br>
+
+        <label for="pass">Contraseña:</label>
+        <input type="password" name="pass" id="pass">
+        
+        <br><label for="carrera">Carrera</label>
+        <select name="carrera" id="carrera">
+            <option value="iti">Ing T. Infomación</option>
+            <option value="item">Ing. Telematica</option>
+        </select><br>
+        <input type="radio" name="genero" id="genero" value="F">
+        <label for="genero">Femenino</label>
+        <input type="radio" name="genero" id="genero" value="M">
+        <label for="genero">Masculino</label><br>
+        <input type="checkbox" name="check" id="check">Acepto los terminos y condiciones del servicio<br>
+        <br><input type="button" name="envio" id="envio" value="Enviar" onclick="leer()">
+    </form>
+    <div class="titulos">
+        <h2>Tus datos son:</h2>
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>
