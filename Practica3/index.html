@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulario de Diagnóstico</title>
+  <link rel="stylesheet" href="styles.css" / type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <h1>Formulario de Diagnóstico - JavaScript</h1>
+
+  <form id="diagnosticoForm">
+    <div class="question">
+      <label>1. ¿Cuál de las siguientes es una forma válida de declarar una función en JavaScript?</label><br>
+      <input type="radio" name="q1" value="correcto">function miFuncion() {}<br>
+      <input type="radio" name="q1" value="incorrecto">function = miFuncion[]<br>
+    </div>
+
+    <div class="question">
+      <label>2. ¿Qué palabra clave evita que una variable pueda ser reasignada?</label><br>
+      <input type="radio" name="q2" value="correcto">const<br>
+      <input type="radio" name="q2" value="incorrecto">var<br>
+    </div>
+
+    <div class="question">
+      <label>3. ¿Cuál de los siguientes es un tipo de dato compuesto en JavaScript?</label><br>
+      <input type="radio" name="q3" value="correcto">Objeto<br>
+      <input type="radio" name="q3" value="incorrecto">String<br>
+    </div>
+
+    <div class="question">
+      <label>4. ¿Qué método se usa para recorrer un array y aplicar una función a cada elemento?</label><br>
+      <input type="radio" name="q4" value="correcto">forEach()<br>
+      <input type="radio" name="q4" value="incorrecto">push()<br>
+    </div>
+
+    <div class="question">
+      <label>5. ¿Qué evento se dispara cuando el usuario hace clic en un botón?</label><br>
+      <input type="radio" name="q5" value="correcto">click<br>
+      <input type="radio" name="q5" value="incorrecto">submit<br>
+    </div>
+
+    <div class="question">
+      <label>6. ¿Qué formato usa JavaScript para intercambiar datos de forma ligera?</label><br>
+      <input type="radio" name="q6" value="correcto">JSON<br>
+      <input type="radio" name="q6" value="incorrecto">XMLHttpRequest<br>
+    </div>
+
+    <button type="button" onclick="evaluar()">Enviar</button>
+  </form>
+
+  <div id="resultado" class="result" style="display: none;"></div>
+  <canvas id="grafico" width="400" height="200" style="display: none;"></canvas>
+  <div style="text-align: center;">
+    <button onclick="generarPDF()" style="display: none;" id="btnPDF">Descargar PDF</button>
+  </div>
+
+  <script>
+    let puntuaciones = [];
+
+    function evaluar() {
+      const respuestas = {
+        q1: "correcto",
+        q2: "correcto",
+        q3: "correcto",
+        q4: "correcto",
+        q5: "correcto",
+        q6: "correcto"
+      };
+
+      puntuaciones = [];
+      let puntajeTotal = 0;
+
+      for (let key in respuestas) {
+        const seleccion = document.querySelector(`input[name="${key}"]:checked`);
+        if (!seleccion) {
+          puntuaciones.push(0);
+          continue;
+        }
+
+        const correcto = seleccion.value === respuestas[key];
+        puntuaciones.push(correcto ? 1 : 0);
+        if (correcto) puntajeTotal++;
+      }
+
+      document.getElementById('resultado').innerText =
+        `Tu calificación es: ${puntajeTotal} de 6 puntos.`;
+      document.getElementById('resultado').style.display = 'block';
+
+      mostrarGrafico();
+      document.getElementById('btnPDF').style.display = 'inline-block';
+    }
+
+    function mostrarGrafico() {
+      const ctx = document.getElementById('grafico').getContext('2d');
+      document.getElementById('grafico').style.display = 'block';
+
+      if (window.miGrafico) {
+        window.miGrafico.destroy();
+      }
+
+      window.miGrafico = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: [
+            'Pregunta 1',
+            'Pregunta 2',
+            'Pregunta 3',
+            'Pregunta 4',
+            'Pregunta 5',
+            'Pregunta 6'
+          ],
+          datasets: [{
+            label: 'Puntos por pregunta',
+            data: puntuaciones,
+            backgroundColor: '#4caf50'
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 1,
+              ticks: {
+                stepSize: 1
+              }
+            }
+          }
+        }
+      });
+    }
+
+    async function generarPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      doc.text("Resultados del Diagnóstico", 20, 20);
+      doc.text(`Puntaje total: ${puntuaciones.reduce((a,b) => a + b, 0)} de 6`, 20, 30);
+
+      const canvas = document.getElementById('grafico');
+      const imgData = canvas.toDataURL("image/png");
+      doc.addImage(imgData, 'PNG', 20, 40, 160, 80);
+
+      doc.save("diagnostico.pdf");
+    }
+  </script>
+</body>
+</html>
