@@ -1,0 +1,105 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #033465 0%, #a6c3e4 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 40px;
+  color: #041e3f;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #e0e7ef;
+}
+
+form#tipForm {
+  background: #fff;
+  padding: 32px 28px 24px 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 320px;
+  margin-top: 24px;
+}
+
+label {
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: 4px;
+}
+
+input[type="number"] {
+  padding: 10px 12px;
+  border: 1px solid #bfc9d1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+input[type="number"]:focus {
+  border-color: #4f8cff;
+  background: #f0f6ff;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #4f8cff 0%, #38b6ff 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  transition: background 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #38b6ff 0%, #4f8cff 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+#result {
+  margin-top: 32px;
+  background: #f7fafc;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.06);
+  padding: 24px 32px;
+  min-width: 320px;
+  color: #2d3a4b;
+  text-align: center;
+  font-size: 1.1rem;
+  display: none;
+  animation: fadeIn 0.7s;
+}
+
+#result h2 {
+  margin-top: 0;
+  color: #38b6ff;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+#result p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
